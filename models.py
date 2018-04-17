@@ -14,7 +14,7 @@ class ProxyItem(object):
     ip = attr.ib()
     port = attr.ib(convert=int)
     position = attr.ib(default='')
-    weight = attr.ib(default=0, convert=int)      # 权重，默认初始插入数据库时为0
+    weight = attr.ib(default=1, convert=int)      # 权重，默认初始插入数据库时为0
 
     def __str__(self):
         return "{}:{}".format(self.ip, self.port)
